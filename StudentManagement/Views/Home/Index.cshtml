@@ -1,0 +1,66 @@
+﻿@{
+    ViewBag.Title = "Home Page - Student Management System";
+}
+@model StudentManagement.Models.user
+
+<main>
+    <div class="jumbotron bg-light p-5 rounded-lg m-3">
+        <div class="container text-center mt-4">
+            <img src="~/Images/logo.png" style="max-width: 200px; height: 200px;" alt="Logo" class="img-fluid" />
+        </div>
+        <h1 class="display-4">Student Management System</h1>
+        <h3 class="display-4">Welcome, @ViewBag.UserName!</h3>
+
+        <p class="lead">Manage student information, courses, batches, and registrations all in one place.</p>
+        <hr class="my-4">
+        <p>Get started by exploring the various sections of the system.</p>
+        <a class="btn btn-primary btn-lg" href="@Url.Action("Index", "Course")" role="button">Manage Courses</a>
+        <a class="btn btn-secondary btn-lg" href="@Url.Action("Index", "Batch")" role="button">Manage Batches</a>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Student Management</h5>
+                    <p class="card-text">Add, update, and delete student information easily.</p>
+                    <a href="@Url.Action("Index", "Account")" class="btn btn-outline-dark">More &raquo;</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Course Management</h5>
+                    <p class="card-text">Organize and manage courses efficiently.</p>
+                    <a href="@Url.Action("Index", "Course")" class="btn btn-outline-dark">More &raquo;</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Batch Management</h5>
+                    <p class="card-text">Handle student batches and streamline records.</p>
+                    <a href="@Url.Action("Index", "Batch")" class="btn btn-outline-dark">More &raquo;</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Registration Management</h5>
+                    <p class="card-text">Manage student registrations effectively.</p>
+                    <a href="@Url.Action("Index", "Registation")" class="btn btn-outline-dark">More &raquo;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-12 text-center">
+            <img src="~/Images/logo.png" alt="Student Management System" style="max-width: 20px; height: 20px;" class="img-fluid" />
+            
+        </div>
+    </div>
+</main>

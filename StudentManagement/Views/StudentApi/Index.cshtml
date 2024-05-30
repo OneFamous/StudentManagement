@@ -1,0 +1,32 @@
+﻿@model IEnumerable<ModelLayer.Student>
+
+@{
+    ViewBag.Title = "Student";
+}
+
+<h2>Student List</h2>
+
+<div style="width:100%; float:left; background-color:aliceblue">
+    <div>
+        <div style="width: 18%; float: left; padding:1%; background:#808080">ID</div>
+        <div style="width: 18%; float: left; padding:1%; background:#808080">FirstName</div>
+        <div style="width: 18%; float: left; padding:1%; background:#808080">LastName</div>
+        <div style="width: 18%; float: left; padding:1%; background:#808080">UserName</div>
+        <div style="width: 18%; float: left; padding:1%; background:#808080">Password</div>
+        
+
+    </div>
+    @{
+        foreach (var student in Model)
+        {
+        <br />
+            <div style="width: 18%; float: left; padding:1%;" >@student.id</div>
+            <div style="width: 18%; float: left; padding:1%;" >@student.firstname</div>
+            <div style="width: 18%; float: left; padding:1%;" >@student.lastname</div>
+            <div style="width: 18%; float: left; padding:1%;" >@student.username</div>
+            <div style="width: 18%; float: left; padding:1%;" >@student.password</div>
+            
+        }
+    }
+</div>   
+
